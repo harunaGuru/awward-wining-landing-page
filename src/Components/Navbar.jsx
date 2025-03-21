@@ -31,9 +31,19 @@ const Navbar = () => {
     }
     useEffect(()=>{
         if(isPlaying){
+            setIsActive(true);
+            audioRef.current.volume = 1;
             audioRef.current.play();
+
         }else {
-            audioRef.current.pause();
+            setTimeout(()=>{
+                audioRef.current.volume = 0.4
+            },500)
+            setTimeout(()=>{
+                setIsActive(false);
+                audioRef.current.volume = 0;
+                audioRef.current.pause();
+            }, 1000)
         }
     },[isPlaying])
     useEffect(() => {
