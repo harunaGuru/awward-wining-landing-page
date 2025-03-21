@@ -27,7 +27,7 @@ const Navbar = () => {
 
     const handleAudioClick =()=>{
         setIsPlaying(prev => !prev)
-        setIsActive(prev => !prev)
+        // setIsActive(prev => !prev)
     }
     useEffect(()=>{
         if(isPlaying){
