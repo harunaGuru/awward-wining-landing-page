@@ -4,7 +4,7 @@ import {FaDiscord, FaGithub, FaTwitch, FaTwitter} from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className="bg-violet-300 w-full ">
-            <div className="container mx-auto flex items-center justify-between text-blue-200 text-sm px-6 py-4">
+            <div className="container mx-auto flex flex-col gap-4 md:flex-row items-center justify-between text-blue-200 text-sm px-6 py-4">
                 <p>
                     © Nova 2024. All rights reserved
                 </p>
