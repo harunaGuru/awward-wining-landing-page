@@ -6,44 +6,16 @@ import {ScrollTrigger} from "gsap/all";
 import {cn} from "../utils.js";
 
 gsap.registerPlugin(useGSAP,ScrollTrigger);
-// transform: perspective(700px) translateX(-100px) translateY(20px) rotateX(40deg) rotateY(-20deg) ;
 
 const AnimatedText = ({text, className, active=false}) => {
-    const containerRef = useRef(null);
-    // useGSAP(()=>{
-    //     let ctx = gsap.context(()=>{
-    //         const timeline = gsap.timeline({
-    //             scrollTrigger:{
-    //                 trigger: containerRef.current,
-    //                 // duration: 1,
-    //                 // ease: "power2.inOut",
-    //                 start: '100 bottom',
-    //                 end: "center bottom",
-    //                 toggleActions: "play none none none",
-    //             }
-    //         })
-    //         timeline.to(".animated-title", {
-    //             opacity: 1,
-    //             // duration: 1,
-    //             transform: "translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)",
-    //             ease: "power3",
-    //             stagger: 0.02,
-    //
-    //         })
-    //
-    //
-    //     }, containerRef.current);
-    //     return () => ctx.revert();
-    // },[])
 
+    const containerRef = useRef(null);
 
     useGSAP(()=>{
         let ctx = gsap.context(()=>{
             const timeline = gsap.timeline({
                 scrollTrigger:{
                     trigger: containerRef.current,
-                    // duration: 3,
-                    // ease: "power2.inOut",
                     start: '100 bottom',
                     end: "20 bottom",
                     // scrub: 0.5,
@@ -58,21 +30,6 @@ const AnimatedText = ({text, className, active=false}) => {
                 stagger: 0.02,
 
             })
-            // gsap.to(".animated-text", {
-            //     opacity: 1,
-            //     stagger: 0.02,
-            //     transform: "perspective(0px) translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg)",
-            //     scrollTrigger:{
-            //         trigger: containerRef.current,
-            //         duration: 1,
-            //         ease: "power2.inOut",
-            //         scrub: true,
-            //         start: '100 bottom',
-            //         end: "center bottom",
-            //         toggleActions: "play none none reverse",
-            //     }
-            // });
-
         }, containerRef.current);
         return () => ctx.revert();
     },[])

@@ -4,7 +4,6 @@ import SvgCorner from "./SvgCorner.jsx";
 
 const Contact = () => {
     return (
-        // py-20
         <div id="contact" className="relative  min-h-screen w-screen bg-inherit">
             <div className="relative my-20  bg-blue-200 flex flex-col items-center justify-center border mx-auto border-black rounded-lg bg-back w-[90vw] h-[100dvh] gap-4">
                 <p className="font-general text-white uppercase text-sm text-center mt-10 md:mt-0 z-10">Join Zentry</p>

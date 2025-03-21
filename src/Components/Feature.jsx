@@ -48,9 +48,6 @@ const Feature = () => {
             setTransform( "")
         }
 
-
-        // onMouseEnter={handleMouseLeave}
-        //
         return (
             <div ref={itemRef}  onMouseEnter={handleMouseLeave} style={{transform: `${transform}`, transition:"transform 0.5 ease-in-out "}} className={clsx("tilt", className)} onMouseMove={handleMouseMove}  onMouseLeave={handleMouseLeave}>
                 {children}

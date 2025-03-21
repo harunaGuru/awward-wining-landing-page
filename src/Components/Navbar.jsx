@@ -28,7 +28,6 @@ const Navbar = () => {
     const handleAudioClick =()=>{
         setIsPlaying(prev => !prev)
         setIsActive(prev => !prev)
-        // lineRef.current.classList.toggle("active");
     }
     useEffect(()=>{
         if(isPlaying){
@@ -60,7 +59,6 @@ const Navbar = () => {
                 y: isVisible ? 0 : -100,
                 duration: 0.2,
                 ease: "power3",
-                // delay: 0.5,
             })
         }
         else if(!haveBgColor){
@@ -100,11 +98,7 @@ const Navbar = () => {
                         <span className="line"></span>
                         <span className="line"></span>
                         </div>
-                        {/*{[1, 2, 3, 4, 5].map((bar, i) => (*/}
-                        {/*   */}
-                        {/*        <span key={i} style={{animationDelay: `${bar * i * 0.5}s`}} className={clsx( " h-[1px] w-px rounded-full bg-blue-75 transition-all duration-200 ease-in-out line-input", {active: IsActive})}/>*/}
 
-                        {/*))}*/}
                     </li>
 
                 </ul>

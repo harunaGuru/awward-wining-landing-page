@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 
 const Story = () => {
     const storyRef = React.useRef(null);
-    const [transform, setTransform] = React.useState("");
     const [rotateX, setRotateX] = React.useState(0);
     const [rotateY, setRotateY] = React.useState(0);
 
@@ -17,14 +16,11 @@ const Story = () => {
         const relativeX = clientX - left ;
         const relativeXCenter = width/2
         const rotatedY = ((relativeX - relativeXCenter ) / relativeXCenter ) * 14
-        // console.log({rotatedY})
         setRotateY(rotatedY)
         const relativeY = clientY - top ;
         const relativeYCenter = height / 2
         const rotatedX = ((relativeY - relativeYCenter ) / relativeYCenter ) * -14
-        // console.log({rotatedX})
         setRotateX(rotatedX)
-        // setTransform(`perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) `)
             gsap.to(element, {
                 duration: 0.3,
                 ease: "power1.out",
@@ -34,7 +30,6 @@ const Story = () => {
             })
     }
     function handleMouseLeave(e){
-        // setTransform("")
         const element = storyRef.current
         if(element){
             gsap.to(element, {

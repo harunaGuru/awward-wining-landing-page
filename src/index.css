@@ -31,10 +31,8 @@
 body{
     font-family: 'General sans', sans-serif;
     width: 100dvw;
-    /*height: 100vh;*/
     overflow-x: hidden;
     background-color: #dfdff0;
-    /*margin: 0;*/
     scroll-behavior: smooth;
 }
 @layer utilities {
@@ -56,23 +54,13 @@ body{
     }
     .animated-title{
         @apply mb-6 flex flex-col items-center gap-2;
-        /*opacity: 0;*/
-        /*transform: translate3d(-100px, 10px, -60px) rotateX(80deg) rotateY(-80deg) ;*/
-        /*transform-origin: center !important;*/
-        /*will-change: opacity, transform;*/
+
     }
-    /*.perspective(700px) translateX(-100px) translateY(10px)*/
     .animated-text{
         opacity: 0;
         transform: translate3d(-150px, 30px, -110px) rotateX(8deg) rotateY(-40deg) ;
         transform-origin: center !important;
         will-change: opacity, transform;
-
-        /*transform: perspective(700px) translateX(-100px) rotateX(20deg) rotateY(-20deg);*/
-        /*opacity: 0;*/
-        /*transform: perspective(700px) translateX(-100px) translateY(20px) rotateX(40deg) rotateY(-20deg) ;*/
-        /*transform-origin: center !important;*/
-        /*will-change: opacity, transform;*/
     }
     .border-hsla{
         @apply rounded-md border border-blue-75;
@@ -83,13 +71,8 @@ body{
     .clip-parent{
         filter: url('#goo');
         overflow:hidden;
-        /*position: fixed;*/
-        /*right:-50px;*/
-        /*z-index: 1;*/
-        /*margin-top: 10vw;*/
     }
     .svg-class{
-        /*style="visibility: hidden; position: absolute;" width="0" height="0"*/
         visibility: hidden;
         position: absolute;
         width: 0;
@@ -100,7 +83,6 @@ body{
     }
     .flt_svg {
         visibility: hidden;
-        /*position: absolute;*/
         width: 0;
         height: 0;
     }
@@ -178,13 +160,7 @@ body{
     animation-delay: 1.8s;
 }
 
-/*.line-input.active{*/
-/*    animation: audioPlay 0.5s infinite ease;*/
-/*    !*animation-delay: calc(var(--animation-order) * 0.1s);*!*/
-/*}*/
-/*.line-input:nth-child(1){*/
-/*    @apply !h-10*/
-/*}*/
+
 
 /* From Uiverse.io by G4b413l */
 /* https://uiverse.io/G4b413l/tidy-walrus-92 */
