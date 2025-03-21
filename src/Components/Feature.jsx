@@ -15,8 +15,8 @@ const Feature = () => {
                 <video src={src} autoPlay loop muted className="absolute top-0 left-0 size-full object-cover object-center" />
                 <div className="absolute z-10 top-6 left-4 w-full flex flex-col gap-4">
                     {title && <span
-                        className="font-zentry font-black text-blue-100 uppercase special-font text-[5rem] leading-[5rem]">{title}</span>}
-                    { subtitle && <p className="max-w-sm text-blue-75">{subtitle}</p>}
+                        className="font-zentry font-black text-blue-100 uppercase special-font text-[2rem] leading-[2rem] md:text-[5rem] md:leading-[5rem]">{title}</span>}
+                    { subtitle && <p className="max-w-sm text-xs md:text-base text-blue-75">{subtitle}</p>}
                 </div>
             </div>
             )
@@ -75,13 +75,13 @@ const Feature = () => {
 
 
                     <div className="grid grid-cols-2 grid-rows-3 gap-7 h-[135dvh] overflow-hidden w-full ">
-                        <TiltCard className="col-span-1 row-span-1 md:row-span-2 border-hsla">
+                        <TiltCard className="col-span-2 md:col-span-1 row-span-1 md:row-span-2 border-hsla">
                             <BentoCard src="/videos/feature-2.mp4" title="zigma" subtitle="An anime and gaming-inspired NFT collection - the IP primed for expansion." />
                         </TiltCard>
-                        <TiltCard className="col-span-1 row-span-1 border-hsla">
+                        <TiltCard className="md:col-span-1 ms-24 md:ms-0 col-span-2 row-span-1 border-hsla">
                             <BentoCard src="/videos/feature-3.mp4" title="nexus" subtitle="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities." />
                         </TiltCard>
-                        <TiltCard className="col-span-1 row-span-1 border-hsla">
+                        <TiltCard className="md:col-span-1 col-span-2 me-24 md:me-0 row-span-1 border-hsla">
                             <BentoCard src="/videos/feature-4.mp4" title="azul" subtitle="A cross-world AI Agent - elevating your gameplay to be more fun and productive." />
                         </TiltCard>
                         <TiltCard className=" bg-violet-300 col-span-1 row-span-1 rounded-md flex flex-col justify-between py-5 px-4">

@@ -63,7 +63,7 @@ body{
         will-change: opacity, transform;
     }
     .border-hsla{
-        @apply rounded-md border border-blue-75;
+        @apply rounded-md border border-blue-75/20 ;
     }
     .img-clip-path{
         clip-path: polygon(57% 7%, 88% 6%, 100% 6%, 100% 70%, 100% 59%, 0 100%, 0% 70%, 0 0);
